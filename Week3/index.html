@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Task Planner</h1>
+            <p>Enter your goal, and AI will break it down into a step-by-step plan.</p>
+        </header>
+
+        <main>
+            <div class="input-card">
+                <input type="text" id="goal-input" placeholder="e.g., Plan a 3-day trip to Kyoto, Japan" autocomplete="off">
+                <button id="generate-btn">Generate Plan</button>
+            </div>
+
+            <div id="loading-state" class="hidden">
+                <div class="spinner"></div>
+                <p>Gemini is mapping out your tasks...</p>
+            </div>
+
+            <div id="error-message" class="hidden"></div>
+
+            <section id="task-container" class="hidden">
+                <h2>Your Action Plan</h2>
+                <div id="task-list"></div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
